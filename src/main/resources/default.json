@@ -1,0 +1,16 @@
+{
+  "people": [
+    "Maël", "Adrien",
+    "Mathis billy", "Mathis bellenger",
+    "Adam", "Suzanne", "Nathan", "Maxime",
+    "Mojang", "Minecraft"
+  ],
+  "verbs": [
+    "mange", "cloue", "tue", "tape",
+    "aime", "déteste"
+  ],
+  "objects": [
+    "un clou", "une patate", "sa calculatrice",
+    "java", "python", "unity"
+  ]
+}

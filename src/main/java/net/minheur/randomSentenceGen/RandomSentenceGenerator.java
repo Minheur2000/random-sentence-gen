@@ -7,6 +7,7 @@ import net.minheur.potoflux.loader.mod.ModEventBus;
 import net.minheur.potoflux.loader.mod.events.RegisterLangEvent;
 import net.minheur.potoflux.logger.LogCategories;
 import net.minheur.potoflux.logger.PtfLogger;
+import net.minheur.randomSentenceGen.init.RsgCommands;
 import net.minheur.randomSentenceGen.translations.RsgTranslations;
 
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class RandomSentenceGenerator {
     public RandomSentenceGenerator() {
         ModEventBus modEventBus = PotoFluxLoadingContext.get().getModEventBus();
 
+        modEventBus.addListener(RsgCommands::register);
         modEventBus.addListener(this::onRegisterLang);
     }
 
