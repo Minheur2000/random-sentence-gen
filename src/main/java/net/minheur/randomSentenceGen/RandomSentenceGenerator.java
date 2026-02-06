@@ -15,7 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
 
-@Mod(modId = RandomSentenceGenerator.MOD_ID, version = "1.0", compatibleVersions = {"6.3"})
+@Mod(modId = RandomSentenceGenerator.MOD_ID, version = "1.0", compatibleVersionUrl = "https://technomastery.github.io/PotoFluxAppData/ptfVersion/rsgVersion.json")
 public class RandomSentenceGenerator {
     public static final String MOD_ID = "rsg";
 
