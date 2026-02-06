@@ -1,4 +1,4 @@
-package your.packagename;
+package net.minheur.randomSentenceGen;
 
 import net.minheur.potoflux.PotoFlux;
 import net.minheur.potoflux.loader.PotoFluxLoadingContext;
@@ -7,27 +7,25 @@ import net.minheur.potoflux.loader.mod.ModEventBus;
 import net.minheur.potoflux.loader.mod.events.RegisterLangEvent;
 import net.minheur.potoflux.logger.LogCategories;
 import net.minheur.potoflux.logger.PtfLogger;
-import your.packagename.tabs.Tabs;
-import your.packagename.translations.ExampleModTranslations;
+import net.minheur.randomSentenceGen.translations.RsgTranslations;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
 
-@Mod(modId = ExampleMod.MOD_ID, version = "1.0", compatibleVersions = {"6.1"})
-public class ExampleMod {
-    public static final String MOD_ID = "yourmodid";
+@Mod(modId = RandomSentenceGenerator.MOD_ID, version = "1.0", compatibleVersions = {"6.3"})
+public class RandomSentenceGenerator {
+    public static final String MOD_ID = "rsg";
 
-    public ExampleMod() {
+    public RandomSentenceGenerator() {
         ModEventBus modEventBus = PotoFluxLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(Tabs::register);
         modEventBus.addListener(this::onRegisterLang);
     }
 
     private void onRegisterLang(RegisterLangEvent event) {
-        event.registerLang(new ExampleModTranslations());
+        event.registerLang(new RsgTranslations());
     }
 
     public static Path getModDir() {
@@ -41,7 +39,7 @@ public class ExampleMod {
     public static String getVersion() {
         try {
             Properties props = new Properties();
-            props.load(ExampleMod.class.getResourceAsStream("/modVersion.properties"));
+            props.load(RandomSentenceGenerator.class.getResourceAsStream("/modVersion.properties"));
 
             return props.getProperty("version");
         } catch (IOException e) {

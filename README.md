@@ -1,2 +1,2 @@
-# PotoFlux mod template
-An easy way to get a start for making PotoFlux mods
+# Random sentence generator
+A potoflux mod that allows you to generate random sentences. You can even create your own !
